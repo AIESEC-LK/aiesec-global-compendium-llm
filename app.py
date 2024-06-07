@@ -7,8 +7,10 @@ import os
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 # Headlines
-st.title("Chat with the Global Compendium (β Version)")
+st.title("Chat with the Global Compendium \(β Version)")
 st.subheader("Product of AIESEC in Sri Lanka")
+
+st.write("<br>", unsafe_allow_html=True)
 
 # Sessions
 if 'responses' not in st.session_state:
@@ -45,11 +47,11 @@ with response_container:
 
 
 
-st.write("<br><br>", unsafe_allow_html=True)
+st.write("<br><br><br>", unsafe_allow_html=True)
 
 #Footer
 st.write("<p style='text-align: center;'>Please note that this is a beta app and we are working on more the finetuning and the user interface as well. If you have any suggestion or feedback please contact fouzul.hassan@aiesec.net</p>", unsafe_allow_html=True)
-st.write("<br><br><br>", unsafe_allow_html=True)
+st.write("<br>", unsafe_allow_html=True)
 
 #Footer
 st.write("<p style='text-align: center;'>Made with ❤️ by &lt;/Dev.Team&gt; of AIESEC in Sri Lanka</p>", unsafe_allow_html=True)
