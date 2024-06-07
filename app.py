@@ -7,7 +7,7 @@ import os
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 # Headlines
-st.title("Chat with Global Compendium (β Version)")
+st.title("Chat with the Global Compendium (β Version)")
 st.subheading("Product of AIESEC in Sri Lanka")
 
 # Sessions
