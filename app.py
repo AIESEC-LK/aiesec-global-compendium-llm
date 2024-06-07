@@ -7,8 +7,8 @@ import os
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 # Headlines
-st.title("AIESEC In Sri Lanka")
-st.subheader("Chat with Global Compendium (β Version)")
+st.title("Chat with Global Compendium (β Version)")
+st.subheading("Product of AIESEC in Sri Lanka")
 
 # Sessions
 if 'responses' not in st.session_state:
