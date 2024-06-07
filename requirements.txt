@@ -2,6 +2,7 @@ langchain_openai
 langchain_core
 python-dotenv
 streamlit
+streamlit_chat
 langchain_community
 langserve
 fastapi
