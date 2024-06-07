@@ -30,9 +30,13 @@ with textcontainer:
 
     if query:
         with st.spinner("typing..."):
-            chain = create_retrieval()
-            response = chain.invoke({"input": query})
-            response = response["answer"]
+            try:
+                chain = create_retrieval()
+                response = chain.invoke({"input": query})
+                response = response["answer"]
+            except Exception as e:
+                st.error(f"An error occurred: {e}")
+                st.stop()
         st.session_state.requests.append(query)
         st.session_state.responses.append(response)
         st.session_state["query"] = ""
@@ -43,8 +47,6 @@ with response_container:
             message(st.session_state['responses'][i], key=str(i))
             if i < len(st.session_state['requests']):
                 message(st.session_state["requests"][i], is_user=True, key=str(i) + '_user')
-
-
 
 
 st.write("<br><br><br>", unsafe_allow_html=True)
