@@ -8,11 +8,11 @@ OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 # Headlines
 st.title("Chat with the Global Compendium (β Version)")
-st.subheading("Product of AIESEC in Sri Lanka")
+st.subheader("Product of AIESEC in Sri Lanka")
 
 # Sessions
 if 'responses' not in st.session_state:
-    st.session_state['responses'] = ["Hi! Welcome to AIESEC In Sri Lanka.\nHow can I assist you?"]
+    st.session_state['responses'] = ["Ayobowan! Welcome to AIESEC in Sri Lanka's Chat with Global Compendium App.\nHow can I assist you?"]
 
 if 'requests' not in st.session_state:
     st.session_state['requests'] = []
@@ -45,7 +45,11 @@ with response_container:
 
 
 
+st.write("<br><br>", unsafe_allow_html=True)
 
+#Footer
+st.write("<p style='text-align: center;'>Please note that this is a beta app and we are working on more the finetuning and the user interface as well. If you have any suggestion or feedback please contact fouzul.hassan@aiesec.net</p>", unsafe_allow_html=True)
 st.write("<br><br><br>", unsafe_allow_html=True)
+
 #Footer
 st.write("<p style='text-align: center;'>Made with ❤️ by &lt;/Dev.Team&gt; of AIESEC in Sri Lanka</p>", unsafe_allow_html=True)
